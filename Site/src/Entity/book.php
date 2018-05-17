@@ -8,7 +8,6 @@ class Book
 	private $id_book;
 	private $title;
 	private $author;
-	private $date;
 	private $description;
 
 	public function setId_book($arg)
@@ -39,16 +38,6 @@ class Book
 	public function getAuthor()
 	{
 		return $this -> author;
-	}
-
-	public function setDate($arg)
-	{
-		$this -> date = $arg;
-	}
-
-	public function getDate()
-	{
-		return $this -> date;
 	}
 
 	public function setDescription($arg)
