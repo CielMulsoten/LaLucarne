@@ -11,7 +11,7 @@ class Users
 	private $bith;
 	private $type;
 	private $email;
-	private $status;
+
 
 
 	public function setId_users($arg)
@@ -74,13 +74,4 @@ class Users
 		return $this -> email;
 	}
 
-	public function setStatus($arg)
-	{
-		$this -> status = $arg;
-	}
-
-	public function getStatus()
-	{
-		return $this -> status;
-	}
 }
