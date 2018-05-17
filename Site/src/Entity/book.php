@@ -7,7 +7,6 @@ class Book
 {	
 	private $id_book;
 	private $title;
-	private $genre;
 	private $author;
 	private $date;
 	private $description;
@@ -30,16 +29,6 @@ class Book
 	public function getTitle()
 	{
 		return $this -> title;
-	}
-
-	public function setGenre($arg)
-	{
-		$this -> genre = $arg;
-	}
-
-	public function getGenre()
-	{
-		return $this -> genre;
 	}
 
 	public function setAuthor($arg)
