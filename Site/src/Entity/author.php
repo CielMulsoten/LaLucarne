@@ -7,7 +7,6 @@ class Author
 {
 	private $name;
 	private $firstname;
-	private $birth;
 	private $id_book;
 	private $id_author;
 
@@ -29,16 +28,6 @@ class Author
 	public function getFirstname()
 	{
 		return $this -> firstname;
-	}
-
-	public function setBirth($arg)
-	{
-		$this -> birth = $arg;
-	}
-
-	public function getBirth()
-	{
-		return $this -> birth;
 	}
 
 	public function setId_book($arg)
