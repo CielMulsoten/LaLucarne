@@ -5,6 +5,7 @@ body {
 body header {
   margin: auto;
   width: 60vw;
+  margin-bottom: 70px;
 }
 body header h1 {
   position: relative;
@@ -81,7 +82,7 @@ body nav #store .submenu a {
 }
 body nav a .submenu a:first-child,
 body nav #store .submenu a:first-child {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
   width: 90%;
 }
 body nav #store:hover {
@@ -110,4 +111,37 @@ $gradient
   height: 3px;
   width: 80vw;
   background: linear-gradient(to right, rgba(0,0,0,0) 1%, #b4b4b4 3%, #b4b4b4 96%, rgba(0,0,0,0) 99%);
+}
+body #content {
+  height: 100vw;
+}
+body footer {
+  background-color: #00395d;
+  height: 50px;
+  width: 100vw;
+  margin-bottom: 0;
+}
+body footer a,
+body footer p {
+  line-height: 50px;
+  display: inline-block;
+  color: #fff;
+}
+body footer p {
+  margin-left: 30px;
+}
+body footer a:first-of-type {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: #fff;
+}
+body footer a:last-child {
+  float: right;
+  margin-right: 30px;
+  text-decoration: underline;
+}
+body footer a:last-child:hover {
+  color: #c7c7c7;
 }
