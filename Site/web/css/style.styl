@@ -1,0 +1,112 @@
+
+
+@import "Normalize.css"
+
+$green = #008b77;
+$blue = #002874;
+
+	
+separator(orientation,size)
+	$gradient
+	display: block;
+	if orientation == horizontal
+		height: 3px;
+		width: size
+		$gradient = to right
+	else if orientation == vertical
+		height: size
+		width: 3px
+		$gradient = to bottom
+	else
+		error("Invalid orientation")
+	
+	background: linear-gradient($gradient, rgba(0,0,0,0) 1%, #b4b4b4 3%, #B4B4B4 96%, rgba(0,0,0,0) 99% );
+
+
+body 
+	background-color: #F1F1F1
+	header
+		margin: auto
+		width: 60vw
+		h1
+			position: relative;
+			top: 20px;
+			img
+				margin: auto;
+				display: block;
+			a
+				font-family: 'Shadows Into Light', cursive;
+				color:  $green
+				&:hover
+					color: @color
+				p
+					text-shadow: 1px 1px 0px #008b77;
+					width: 100%;
+					text-align: center;
+					position: absolute;
+					top: 141px;
+					text-transform: uppercase;
+					span
+						font-size: 24px;
+						opacity: 0.5;
+						text-transform: none;
+						text-shadow: 0.5px 0.5px 0 #008b77;
+						position: absolute;
+						bottom: -20px;
+						right: 180px;
+	
+	nav
+		width: 80vw;
+		margin: auto;
+		font-family: 'Montserrat', sans-serif;
+		a, #store
+			display: inline-block;
+			width: 150px;
+			height: 30px;
+			text-align: center;
+			color: $blue;
+			font-size: 18px;
+			&:hover
+				background: radial-gradient(ellipse at bottom, rgba(0,101,116,0.65) 2%,rgba(0,85,97,0.65) 20%,rgba(0,0,0,0) 66%)
+				color: #002874
+				text-decoration: none
+			.submenu
+				background:linear-gradient(rgba(0,101,116,0.7) 80%, rgba(0,0,0,0)) ;
+				display: block;
+				height: 0px;
+				overflow-y: hidden;
+				margin-bottom: -11px;
+				width: 170%;
+				font-size: 14px;
+				a
+					display: block;
+					width: 100%;
+					text-align: center;
+					color: #ffffff;
+					background: none
+					padding: 5px
+					height:auto
+					margin: auto
+				a:first-child
+					border-bottom: 1px solid white
+					width: 90%
+					
+		#store:hover
+			position: relative;
+			>.submenu
+				position: absolute;
+				height: 100px;
+				top: 32px;
+				transition: height 1s;
+		#store:not(:hover)
+			position:relative
+			>.submenu
+				position: absolute
+				height: 0px
+				transition: height 1s
+			>.submenu:hover
+				height: 100px
+				
+					
+		.c-border-bottom
+			separator(horizontal, 80vw)
