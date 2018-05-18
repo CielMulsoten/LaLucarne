@@ -9,6 +9,7 @@ class Book
 	private $title;
 	private $author;
 	private $description;
+	private $price;
 
 	public function setId_book($arg)
 	{
@@ -48,5 +49,15 @@ class Book
 	public function getDescription()
 	{
 		return $this -> description;
+	}
+	
+	public function setPrice($arg)
+	{
+		$this -> price = $arg;
+	}
+
+	public function getPrice()
+	{
+		return $this -> price;
 	}
 }
