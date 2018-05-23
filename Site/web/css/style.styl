@@ -3,8 +3,11 @@
 @import "Normalize.css"
 
 $green = #008b77;
-$blue = #002874;
-
+$darkGreen = #005530
+$blue = #006574
+$darkBlue = #002874;
+$lightGrey = #b8b8b8
+$darkGrey = #a0a0a0
 	
 separator(orientation,size)
 	$gradient
@@ -21,9 +24,14 @@ separator(orientation,size)
 		error("Invalid orientation")
 	
 	background: linear-gradient($gradient, rgba(0,0,0,0) 1%, #b4b4b4 3%, #B4B4B4 96%, rgba(0,0,0,0) 99% );
+	
 
-body 
-	background-color: #F1F1F1
+
+body
+	background-color: #F1F1F1 !important
+	width: 80vw
+	margin: auto !important
+		
 	header
 		margin: auto
 		width: 60vw
@@ -64,11 +72,11 @@ body
 			width: 150px;
 			height: 30px;
 			text-align: center;
-			color: $blue;
+			color: $darkBlue;
 			font-size: 18px;
 			&:hover
 				background: radial-gradient(ellipse at bottom, rgba(0,101,116,0.65) 2%,rgba(0,85,97,0.65) 20%,rgba(0,0,0,0) 66%)
-				color: #002874
+				color: $darkBlue
 				text-decoration: none
 			.submenu
 				background:linear-gradient(rgba(0,101,116,0.7) 80%, rgba(0,0,0,0)) ;
@@ -111,10 +119,91 @@ body
 		.c-border-bottom
 			separator(horizontal, 80vw)
 			
-	#content
-		height: 100vw
-		
 			
+	.content
+		height: 100vw
+		position: relative
+		
+		h3
+			text-align: center
+			color: $blue
+			margin-bottom: 20px
+		
+		.button
+			background-color: $blue !important
+			border: 1px solid $darkGreen !important
+			color: white !important
+			margin-left: 70%
+			width:20% !important
+		
+		.admin-nav
+			a
+				width:19%
+					
+		.add
+			height: 550px
+			margin-bottom : 50px
+	
+			.book,.sep-vertical,.event
+				display: inline-block
+				margin-top: 50px
+				position: absolute
+			
+			.book,.event
+				width: 49%
+				h3
+					margin-bottom: 20px
+					
+				label
+					width: 30%
+					
+				select,input
+					border: none
+					border-bottom 1px solid $lightGrey
+					color: $darkGrey
+					width: 60%
+					background: transparent
+				::placeholder
+					color: $darkGrey !important
+					
+					option
+						color: $darkGrey
+				
+				textarea
+					width: 100%
+					height: 100px
+					
+				fieldset
+					display: none
+					
+				fieldset:first-of-type
+					display: block
+			
+			.event
+				right: 0
+			
+			.sep-vertical
+				separator(vertical, 550px)
+				right: 50%
+		
+		.donation, .orders, .users
+			width: 100%
+			margin-bottom: 50px
+			table
+				width: 80%
+				margin: auto
+				tr 	
+					border-bottom: 1px solid rgba($lightGrey, 0.3)
+					th,td 
+						border-left: 1px solid $lightGrey
+						padding-left: 5px
+						&:first-of-type
+							border-left: transparent
+				
+			a
+				float: right
+				margin-right: 100px
+				
 	footer
 		background-color: #00395d
 		height: 50px
