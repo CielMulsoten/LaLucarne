@@ -27,7 +27,7 @@ class BookModel extends Model
     
         $donnees = $resultat -> fetchAll();
     
-        if(!donnees){
+        if(!$donnees){
             return FALSE;
         }else{
             return $donnees;

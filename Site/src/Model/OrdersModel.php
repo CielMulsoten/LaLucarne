@@ -22,7 +22,7 @@ class OrdersModel extends Model
         $resultat -> setFetchMode(PDO::FETCH_CLASS, 'Entity\Orders');
         $donnees = $resultat -> fetchAll();
         
-        if(!donnees){
+        if(!$donnees){
             return FALSE;
         }else{
             return $donnees;

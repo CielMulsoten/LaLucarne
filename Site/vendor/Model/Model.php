@@ -34,7 +34,7 @@ public function findAll(){
     
     $donnees = $resultat -> fetchAll();
     
-    if(!donnees){
+    if(!$donnees){
         return FALSE;
     }
     else{

@@ -1,0 +1,52 @@
+<div class="content">
+
+    <div class="slider">
+        <!-- SLIDER  -->
+        <h3>Actualités</h3>
+        <button class="slider-left"> <i class="fa fa-chevron-left" aria-hidden="true"></i> </button>
+
+        <a href="<?= $url ?>">
+            <div class="img">
+                <img src="<?= $img ?>">
+            </div>
+            <div class="actu">
+                <h4>
+                    <?= $actuTitle ?>
+                </h4>
+                <p>
+                    <?= $actu ?>
+                </p>
+            </div>
+        </a>
+
+        <button class="slider-right"> <i class="fa fa-chevron-right" aria-hidden="true"></i> </button>
+    </div>
+    <div class="sep-vertical h-350"></div>
+    <div class="news">
+        <h3><span>Restez informé</span></h3>
+        Recevez par mail les dernières actualités
+        <br /><br/>
+        <form>
+            <input type="text" name="name" placeholder="Nom">
+            <br />
+            <input type="mail" name="mail" placeholder="mail">
+            <br /><br/>
+            <input type="button" value="S'Abonner">
+        </form>
+    </div>
+    <div id="presentation">
+        <h3><span>La maison d'édition</span></h3>
+        <p>
+            <?= $presentation ?>
+        </p>
+    </div>
+
+    <div id="freeEdit">
+        <h3 class="align"><span><?= $freeEditTitle ?></span></h3>
+        <hr>
+        <p id="align">
+            <?= $content ?>
+        </p>
+        <img src="<?= $img ?>">
+    </div>
+</div>

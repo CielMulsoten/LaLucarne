@@ -11,4 +11,8 @@ class Config
     public function getParametersConnect(){
         return $this -> parameters['connect'];
     }
+    public function getParametersSite(){
+        return $this -> parameters['site'];
+        // Cette fonction retourne seulement les informations relatives au site (url, racine, chemin) qui me seront utiles dans mes vues.
+    }
 }

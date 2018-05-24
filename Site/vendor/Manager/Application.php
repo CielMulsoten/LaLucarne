@@ -11,18 +11,21 @@ final class Application
     public function __construct(){
         
         $tab = explode('/', $_SERVER['REQUEST_URI']);
+        /*echo '<pre>';
+        print_r($tab);
+        echo '</pre>';*/
         
-        if(isset($tab[1]) && !empty($tab[1]) && file_exists(__DIR__ . '/../../src/Controller/'. ucfirst($tab[1]) . 'Controller.php'))
+        if(isset($tab[5]) && !empty($tab[5]) && file_exists(__DIR__ . '/../../src/Controller/'. ucfirst($tab[5]) . 'Controller.php'))
         {
-            $this -> controller = 'Controller\\' . ucfirst($tab[1]) . 'Controller';
+            $this -> controller = 'Controller\\' . ucfirst($tab[5]) . 'Controller';
         }
         else{
             $this -> controller = 'Controller\BookController';
         }
         
         
-        if(isset($tab[2]) && !empty($tab[2])){
-            $this -> action = $tab[2];
+        if(isset($tab[6]) && !empty($tab[6])){
+            $this -> action = $tab[6];
         }
         else{
             $this -> controller = 'Controller\BookController';
@@ -30,8 +33,8 @@ final class Application
         }
         
         
-        if(isset($tab[3]) && !empty($tab[3])){
-            $this -> argument = $tab[3];
+        if(isset($tab[7]) && !empty($tab[7])){
+            $this -> argument = $tab[7];
         }
     }
     

@@ -7,5 +7,8 @@ $parameters = array(
         'login' => 'root',
         'password' => '',
     ),
-    'security' => array()
+    'security' => array(),
+    'site' => array(
+        'url' => '/LaLucarne-master/Site/web/'
+    )
 );

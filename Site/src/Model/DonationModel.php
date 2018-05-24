@@ -22,7 +22,7 @@ class DonationModel extends Model
         $resultat -> setFetchMode(PDO::FETCH_CLASS, 'Entity\Donation');
         $donnees = $resultat -> fetchAll();
         
-        if(!donnees){
+        if(!$donnees){
             return FALSE;
         }else{
             return $donnees;
