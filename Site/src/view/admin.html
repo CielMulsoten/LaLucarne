@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Panneaux d'administration</title>
+
+</head>
+
+<body>
+    <style type="text/css">
+        body {
+            width: 1200px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .taille {
+            display: inline-block;
+            margin-left: 5%;
+        }
+
+        .ligne {
+            border: solid black 1px;
+            height: 250px;
+            position: absolute;
+            margin-left: 10px;
+        }
+
+        .trait {
+            border: solid black 1px;
+            height: 80px;
+            position: absolute;
+            margin-left: 14px;
+        }
+
+    </style>
+
+    <a href="admin.html #ajouterLivre">ajouter un livre</a>
+    <a href="admin.html #ajouterÉvènement">ajouter un évènement</a>
+    <a href="admin.html #listeCommande">liste des commandes</a>
+    <a href="admin.html #listeDon">liste des don</a>
+    <a href="admin.html #listeUtilisateur">liste des utilisateur</a>
+
+    <hr>
+
+    <div>
+        <div class="taille">
+
+            <h3>Ajouter un Livre</h3>
+            <a name="ajouterLivre"></a>
+            <form>
+                <select name="nom" size="1">
+			<option>Vente
+			<option>Financement
+			</select>
+                <br />
+                <input type="text" name="titre" placeholder="titre">
+                <br />
+                <input type="text" name="auteur" placeholder="auteur">
+                <br />
+                <input type="text" name="prix" placeholder="prix">
+                <br />
+                <input type="text" name="ISBN" placeholder="ISBN">
+                <br />
+                <input type="text" name="nombre de page" placeholder="nombre de page">
+                <br />
+                <textarea placeholder="texte de présentation"></textarea>
+                <br />
+                <label>Extrait :</label>
+                <input type="file" name="fichier" />
+                <br /><br />
+                <input type="button" value="Ajouter">
+            </form>
+        </div>
+        <div class="taille ligne"></div>
+        <div class="taille">
+            <h3>Ajouter un Évènement</h3>
+            <a name="ajouterÉvènement"></a>
+            <form>
+                <select name="nom" size="1">
+			<option>Expositions
+			<option>Soirées
+			<option>Atelier
+			</select>
+                <br />
+                <input type="text" name="titre" placeholder="titre">
+                <br />
+                <input type="text" name="Du :" placeholder="Du :">
+                <br />
+                <input type="text" name="Au :" placeholder="Au :">
+                <br />
+                <input type="text" name="Horaire :" placeholder="Horaire :">
+                <br />
+                <br />
+                <textarea placeholder="texte de présentation"></textarea>
+                <br /><br />
+                <input type="button" value="Ajouter">
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <h3>Liste des Dons</h3>
+        <a name="listeCommande"></a>
+        <div class="taille">
+            <h4>Utilisateur</h4>
+        </div>
+        <div class="taille trait"></div>
+        <div class="taille">
+            <h4>Titre</h4>
+        </div>
+        <div class="taille trait"></div>
+        <div class="taille">
+            <h4>Contribution atteinte</h4>
+        </div>
+        <div class="taille trait"></div>
+        <div class="taille">
+            <h4>Don</h4>
+        </div>
+        <div class="taille trait"></div>
+        <div class="taille">
+            <h4>Date</h4>
+        </div>
+    </div>
+
+    <div>
+        <h3>Liste des Commandes</h3>
+        <a name="listeDon"></a>
+        <div class="taille">
+            <h4>Utilisateur</h4>
+            jeanine
+        </div>
+        <div class="taille trait"></div>
+        <div class="taille">
+            <h4>Titre</h4>
+            R de Rose
+        </div>
+        <div class="taille trait"></div>
+        <div class="taille">
+            <h4>adresse de livraison</h4>
+            23 avenue lombart
+        </div>
+        <div class="taille trait"></div>
+        <div class="taille">
+            <h4>prix</h4>
+            14.90€
+        </div>
+        <div class="taille trait"></div>
+        <div class="taille">
+            <h4>statut</h4>
+            en attente
+        </div>
+        <div class="taille trait"></div>
+        <div class="taille">
+            <h4>date de commande</h4>
+            15 mai 2016
+        </div>
+    </div>
+
+    <div>
+        <h3>liste des Utilisateurs</h3>
+        <a name="listeUtilisateur"></a>
+        <div class="taille">
+            <h4>Utilisateur</h4>
+        </div>
+        <div class="taille trait"></div>
+        <div class="taille">
+            <h4>adresse mail</h4>
+        </div>
+        <div class="taille trait"></div>
+        <div class="taille">
+            <h4>adresse de livraison</h4>
+        </div>
+        <div class="taille trait"></div>
+        <div class="taille">
+            <h4>nombre commande</h4>
+        </div>
+        <div class="taille trait"></div>
+        <div class="taille">
+            <h4>statut derniere commande</h4>
+        </div>
+        <div class="taille trait"></div>
+        <div class="taille">
+            <h4>nombre projet financer</h4>
+        </div>
+    </div>
+</body>
+
+</html>

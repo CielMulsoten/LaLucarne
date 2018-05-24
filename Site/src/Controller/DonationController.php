@@ -1,41 +1,41 @@
-<?php 
+<?php
 namespace Controller;
-class BookController extends Controller
+class DonationController extends Controller
 {
     public function afficheAll(){
         
-        $books = $this -> getModel() -> getAllBooks();
+        $donations = $this -> getModel() -> getAllDonations();
         $cc = new CategoryController;
         $categories = $cc -> liste();
         
         $params = array(
-            'books' => $books,
+            'donations' => $donations,
             'categories' => $categories,
         );
         return $this -> render('admin.html', $params);
     }
     
     public function affiche($id){
-        $book = $this -> getModel() -> getBookById($id);
+        $donation = $this -> getModel() -> getDonationById($id);
         
         $cc = new CategoryController;
         $categories = $cc -> liste();
         
         $params = array(
-            'book' => $book,
+            'donation' => $donation,
             'categories' => $categories,
         );
         return $this -> render('admin.html', $params);
     }
     
-    public function bookByAuthor($auth){
-        $books = $this ->getModel() -> getBookByAuthor($auth);
+    public function donationByUser($user){
+        $donations = $this ->getModel() -> getDonationByUser($user);
         
         $cc = new CategoryController;
         $categories = $cc -> liste();
         
         $params = array(
-            'books' => $books,
+            'donations' => $donations,
             'categories' => $categories,
         );
         
