@@ -1,22 +1,56 @@
 <!doctype html>
 <html lang="fr">
 
+<head>
+    <meta charset="utf-8">
+    <title>
+        <?php $title ?>
+    </title>
+    <link rel="stylesheet" href="../../web/css/style.css">
+
+    	<!-- FontAwesome -->
+    <link rel="stylesheet" type="text/css" href="../../web/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    	<!-- Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- typo du Header -->
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+</head>
 <body>
-<style type="text/css"> body{width: 1200px; text-align: center; margin: 0 auto; border: solid black 1px; } #champ{text-align: right;} </style>
- 	
-<div><!-- numerotation page --></div>
-<div id="champ">
-	<select class="espace" name="trier par" size="1">
+	<style type="text/css"> body{width: 1200px; text-align: center; margin: 0 auto; border: solid black 1px; } #champ{text-align: right;} </style>
+	<div class="content">
+	 	
+		<button class="previousPage"> <i class="fa fa-chevron-left" aria-hidden="true"></i> page précédente </button>
+		<div id="workshopNav">
+				<div><?= $pages ?></div>
+			<select class="espace" name="trier par" size="1">
 				<option>nom</option>
 				<option>auteur</option>
 				<option>genre</option>
 				<option>prix</option>
-				</select>
-	<input class="espace" type="search" name="recherche" placeholder="rechercher">
-</div>
-<br />
-<div><a href=""><img src="http://www.best-of-perigord.tm.fr/menuimage/event_no_image.png"></a> <a href=""><img src="http://www.best-of-perigord.tm.fr/menuimage/event_no_image.png"></a> <a href=""><img src="http://www.best-of-perigord.tm.fr/menuimage/event_no_image.png"></a> <a href=""><img src="http://www.best-of-perigord.tm.fr/menuimage/event_no_image.png"></a></div>
-<br />
-<div><a href=""><img src="http://www.best-of-perigord.tm.fr/menuimage/event_no_image.png"></a> <a href=""><img src="http://www.best-of-perigord.tm.fr/menuimage/event_no_image.png"></a> <a href=""><img src="http://www.best-of-perigord.tm.fr/menuimage/event_no_image.png"></a> <a href=""><img src="http://www.best-of-perigord.tm.fr/menuimage/event_no_image.png"></a></div>
+			</select>
+			<input class="espace" type="search" name="recherche" placeholder="rechercher">
+		</div>
+		<br />
+		<div>
+			<a href=""><img src="http://www.best-of-perigord.tm.fr/menuimage/event_no_image.png"></a> 
+			<a href=""><img src="http://www.best-of-perigord.tm.fr/menuimage/event_no_image.png"></a> 
+			<a href=""><img src="http://www.best-of-perigord.tm.fr/menuimage/event_no_image.png"></a>
+		</div>
+		<br />
+		<div>
+			<a href=""><img src="http://www.best-of-perigord.tm.fr/menuimage/event_no_image.png"></a> 
+			<a href=""><img src="http://www.best-of-perigord.tm.fr/menuimage/event_no_image.png"></a> 
+			<a href=""><img src="http://www.best-of-perigord.tm.fr/menuimage/event_no_image.png"></a>
+		</div>
+		<button class="nextPage"> <i class="fa fa-chevron-right" aria-hidden="true"></i> page suivante </button>
+	</div>
+
+		    		<!-- *****  SCRIPTS  ***** -->
+	    	<!-- Bootstrap JS -->
+	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js" integrity="sha384-u/bQvRA/1bobcXlcEYpsEdFVK/vJs3+T+nXLsBYJthmdBuavHvAW6UsmqO2Gd/F9" crossorigin="anonymous"></script>
+
+	    	<!-- JQuery -->
+	    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </body>
 </html>
