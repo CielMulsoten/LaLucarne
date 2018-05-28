@@ -11,7 +11,7 @@ class BookController extends Controller
         $params = array(
             'books' => $books
         );
-        return $this -> render('layout.html', 'main.html', $params);
+        return $this -> render('layout.html', 'catalogue.html', $params);
     }
     
     public function affiche($id){
@@ -21,7 +21,7 @@ class BookController extends Controller
         $params = array(
             'book' => $book,
         );
-        return $this -> render('layout.html','main.html', $params);
+        return $this -> render('layout.html','livre.html', $params);
     }
     
     public function bookByAuthor($auth){
@@ -32,6 +32,6 @@ class BookController extends Controller
             'books' => $books,
         );
         
-        return $this -> render('layout.html','main.html', $params);
+        return $this -> render('layout.html','catalogue.html', $params);
     }
 }

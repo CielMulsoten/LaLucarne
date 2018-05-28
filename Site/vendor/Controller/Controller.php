@@ -2,16 +2,21 @@
 
 namespace Controller;
 
-use Model;
+use Model, Config;
 
 class Controller
 {
     protected $model;
+    protected $url;
     
     public function __construct(){
         $class = 'Model\\' .str_replace(array('Controller\\', 'Controller'), '', get_called_class()) . 'Model';
         
         $this -> model = new $class;
+
+        $config = new Config;
+        $site = $config -> getParametersSite();
+        $this -> url = $site['url'];
     }
     
     public function getModel(){
@@ -24,6 +29,8 @@ class Controller
         $path_view = $dirView . $view;
         
         $path_layout = $dirView . $layout;
+
+        $params['url'] = $this -> url;
         
         extract($params);
         
