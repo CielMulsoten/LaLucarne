@@ -1,0 +1,135 @@
+<body>
+<style type="text/css"> body{width: 1200px; margin: 0 auto; } fieldset{ text-align: center}</style>
+
+	<div class="content">
+		<nav class="admin-nav">
+			<a href="#ajouterLivre">ajouter un livre</a>
+			<a href="#ajouterÉvènement">ajouter un évènement</a>
+			<a href="#listeCommande">liste des commandes</a>
+			<a href="#listeUtilisateur">liste des utilisateur</a>	
+		<div class="c-border-bottom"></div>	
+		</nav>
+		<div class="add">
+			<div class="book">
+				<a id="ajouterLivre"></a>
+				<h3>Ajouter un Livre</h3>
+				<a name="addBook"></a>
+				<form>
+					<label for="type"> Type</label>
+					<select name="type" size="1">
+						<option>Vente</option>
+						<option>Financement</option>
+					</select>
+					<fieldset class="sell">
+						<br />
+						<label for="title"> titre</label>
+						<input type="text" name="title" placeholder="titre">
+						<br />
+						<label for="author"> auteur</label>
+						<input type="text" name="author" placeholder="auteur">
+						<br />
+						<label for="price"> prix</label>
+						<input type="text" name="price" placeholder="prix">
+						<br />
+						<label for="ISBN"> ISBN</label>
+						<input type="text" name="ISBN" placeholder="ISBN">
+						<br />
+						<label for="nbPage"> nombre de pages:</label>
+						<input type="text" name="nbPage" placeholder="nombre de pages" >
+						<br /> <br>
+						<textarea placeholder="texte de présentation"></textarea>
+						<br /><br>
+						<label>Extrait :</label>
+						<input type="file" name="fichier"/>
+						<br /><br />
+					
+	
+					<input type="button" value="Ajouter" class="button">
+					</fieldset>
+				</form>
+			</div>
+			<div class="sep-vertical"></div>
+			<div class="event">
+				<a id="ajouterÉvènement"></a>
+				<h3>Ajouter un Évènement</h3>
+				<a name="ajouterÉvènement"></a>
+				<form>
+					<label for="type"> Type</label>
+					<select name="type" size="1">
+					<option>Expositions</option>
+					<option>Soirées</option>
+					<option>Atelier</option>
+					</select>
+					<fieldset class="expo">
+						<br />
+						<label for="title"> titre</label>
+						<input type="text" name="title" placeholder="titre">
+						<br />
+						<label for="from"> date: </label>
+						<input type="date" name="from" placeholder="Du :">
+						<br />
+						<label for="to"> Au:</label>
+						<input type="date" name="to" placeholder="Au :">
+						<br />
+						<label for="start-hour"> à partir de</label>
+						<input type="time" name="start-hour" placeholder="à partir de :">
+						<br>
+						<label for="end-hour"> j'usqu'à</label>
+						<input type="time" name="end-hour" placeholder="jusqu'à :">
+						<br />
+						<br />
+						<textarea placeholder="texte de présentation"></textarea>
+						<br /><br />
+					
+
+					<label for="image">Image : </label>
+					<input type="file" name="image">
+					<br /><br />
+					<input type="button" value="Ajouter" class="button">
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		
+		<div class="orders">
+		<a id="listeCommande"></a>
+			<h3>Liste des Commandes</h3>
+			<table>
+				<thead>
+					<tr>
+						<th>Utilisateur</th>
+						<th>Titre</th>
+						<th>Adresse de livraison</th>
+						<th>prix</th>
+						<th>statut</th>
+						<th>Date</th>
+					</tr>
+				</thead>
+				<tbody>
+					<?= orders ?>
+				</tbody>
+			</table>
+			<a href= "<?= $url ?>"> voir plus</a>
+		</div>
+
+		<div class="users">
+		<a id="listeUtilisateur"></a>
+			<h3>liste des Utilisateurs</h3>
+			<table>
+				<thead>
+					<tr>
+						<th>Utilisateur</th>
+						<th>adresse mail</th>
+						<th>Adresse de livraison</th>
+						<th>nombre commande</th>
+						<th>statut dernière commande</th>
+						<th>NB de projets financés</th>
+					</tr>
+				</thead>
+				<tbody>
+					<?= orders ?>
+				</tbody>
+			</table>
+			<a href= "<?= $url ?>"> voir plus</a>
+		</div>
+	</div>
